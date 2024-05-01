@@ -22,34 +22,34 @@ spring:
 LOGS_DIR: ${APP_HOME}/logs
 
 # Embedded tomcat Access logs
-server:
-  tomcat:
-#    basedir: './'
-    accesslog:
-      enabled: true
-      directory: ${LOGS_DIR}
-      suffix: .log
-      prefix: ${spring.application.name}-ACCESS
-      file-date-format: .yyyy-MM-dd
-      rename-on-rotate: true
-#    pattern: "%d{MM-dd-yy HH:mm:ss.SSS} [%thread] %-5level [%33.33logger{5}] [${spring.application.name},%X{traceId:-},%X{spanId:-},%X{errorRef:-}]: %msg%n"      
-      pattern: "%a, xff=%{x-forwarded-for}i,xac=%{x-azure-clientip}i,xsc=%{X-Azure-socketIP}i - %l %u %t %r %s %b"
-  
-logging:
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}.%M] : %msg%n"
-  logback:
-    rollingpolicy:
-      max-file-size: 20MB
-      total-size-cap: 1GB
-      max-history: 5
-  file:
-    name: "${LOGS_DIR}/${spring.application.name}.log"
-    max-history: 5
-    max-size: 1GB
-#    pattern: "%d{MM-dd-yy HH:mm:ss.SSS} [%thread] %-5level [%33.33logger{5}] [${spring.application.name},%X{traceId:-},%X{spanId:-},%X{errorRef:-}]: %msg%n"
-    pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}.%M] : %msg%n"
-  level:
-    root: info
-    org:
-      springframework: info      
+#server:
+#  tomcat:
+##    basedir: './'
+#    accesslog:
+#      enabled: true
+#      directory: ${LOGS_DIR}
+#      suffix: .log
+#      prefix: ${spring.application.name}-ACCESS
+#      file-date-format: .yyyy-MM-dd
+#      rename-on-rotate: true
+##    pattern: "%d{MM-dd-yy HH:mm:ss.SSS} [%thread] %-5level [%33.33logger{5}] [${spring.application.name},%X{traceId:-},%X{spanId:-},%X{errorRef:-}]: %msg%n"      
+#      pattern: "%a, xff=%{x-forwarded-for}i,xac=%{x-azure-clientip}i,xsc=%{X-Azure-socketIP}i - %l %u %t %r %s %b"
+#  
+#logging:
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}.%M] : %msg%n"
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 20MB
+#      total-size-cap: 1GB
+#      max-history: 5
+#  file:
+#    name: "${LOGS_DIR}/${spring.application.name}.log"
+#    max-history: 5
+#    max-size: 1GB
+##    pattern: "%d{MM-dd-yy HH:mm:ss.SSS} [%thread] %-5level [%33.33logger{5}] [${spring.application.name},%X{traceId:-},%X{spanId:-},%X{errorRef:-}]: %msg%n"
+#    pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}.%M] : %msg%n"
+#  level:
+#    root: info
+#    org:
+#      springframework: info      

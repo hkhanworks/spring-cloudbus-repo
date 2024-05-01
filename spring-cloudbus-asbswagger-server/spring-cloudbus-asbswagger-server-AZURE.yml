@@ -1,0 +1,10 @@
+#########################################
+### Spring Cloud Config Server
+#########################################
+spring:
+  cloud:
+    config:
+      server:
+        composite:
+          - type: git
+            searchPaths: '{application}'

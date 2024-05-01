@@ -13,7 +13,7 @@ spring:
                                 #ALWAYS PLACE DEV PROFILES AT END
                                 # TODO: When we move to AppService use 'DEV' only.
                 skipSslValidation: true
-                uri: https://github.com/hkhanworks/spring-cloudembed-repo.git
+                uri: https://github.com/hkhanworks/spring-cloudbus-repo.git
                 default-label: main
 #                searchPaths: 'global-properties,{application}'
                 searchPaths: '{application}'

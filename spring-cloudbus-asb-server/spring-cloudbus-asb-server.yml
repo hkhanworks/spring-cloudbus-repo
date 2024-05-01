@@ -12,7 +12,7 @@ spring:
               TEST:
                 pattern: '*TEST*'
                 skipSslValidation: true
-                uri: https://github.com/hkhanworks/spring-cloudembed-repo.git
+                uri: https://github.com/hkhanworks/spring-cloudbus-repo.git
                 default-label: main
                 searchPaths: '{application}'
 #                searchPaths: 'global-properties,{application}'
